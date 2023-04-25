@@ -10,7 +10,8 @@ router
 .get('/logout', logout)
 .post(
     '/register',
-    body('name').isLength({min: 3}).trim().escape(),
+    body('FirstName').isLength({min: 3}).trim().escape(),
+    body('LastName').isLength({min: 3}).trim().escape(),
     body('email').isEmail().normalizeEmail(),
     body('passwd').isLength({min: 8}).trim(),
     postUser
