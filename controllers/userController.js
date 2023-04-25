@@ -1,7 +1,7 @@
 'use strict';
 // userController
 const userModel = require('../Models/userModel');
-const {validatorResult} = require('express-validator');
+const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 const getUserList = async (req, res) =>{
