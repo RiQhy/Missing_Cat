@@ -3,7 +3,7 @@
 const express = require('express');
 const multer = require('multer');
 const router = express.Router();
-const postController = require('../controllers/postController');
+const seenController = require('../controllers/seenController');
 const {body} = require('express-validator');
 
 const fileFilter = (req, file, cb) => {
@@ -22,9 +22,6 @@ router.route('/')
     .post(upload.single('seen') , 
         seenController.postSeen
     )
-    .put(
-        seenController.putSeen
-    );
 
 router.route('/:id')
     .get(seenController.getSeen)

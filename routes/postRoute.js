@@ -22,9 +22,6 @@ router.route('/')
     .post(upload.single('post') , 
         postController.postPost
     )
-    .put(
-        postController.putPost
-    );
 
 router.route('/:id')
     .get(postController.getPost)

@@ -12,13 +12,13 @@ app.use('/img', express.static('img'));
 //Add cors headers
 app.use(cors());
 
-/*app.use(express.json());
+app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(passport.initialize());
 
 app.use('/auth', authRoute);
 app.use('/post', passport.authenticate('jwt', {session: false}), postRoute);
-app.use('/user', passport.authenticate('jwt', {session: false}), userRoute);*/
+app.use('/user', passport.authenticate('jwt', {session: false}), userRoute);
 
 
 app.listen(port, () => console.log(`Website listening on port ${port}`));
