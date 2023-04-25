@@ -18,16 +18,16 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({dest: 'img/', fileFilter});
 
 router.route('/')
-    .get(postController.getPostList)
-    .post(upload.single('post') , 
-        postController.postPost
+    .get(seenController.getSeenList)
+    .post(upload.single('seen') , 
+        seenController.postSeen
     )
     .put(
-        postController.putPost
+        seenController.putSeen
     );
 
 router.route('/:id')
-    .get(postController.getPost)
-    .delete(postController.deletePost);
+    .get(seenController.getSeen)
+    .delete(seenController.deleteSeen);
 
 module.exports = router;
