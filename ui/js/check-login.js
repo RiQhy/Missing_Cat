@@ -1,6 +1,7 @@
-import {url} from "./conf.js"
+'use strict';
+import {url} from "./conf.js";
+
 (async () => {
-  'use strict';
 
   // check sessionStorage
   if (!sessionStorage.getItem('token') || !sessionStorage.getItem('user')) {

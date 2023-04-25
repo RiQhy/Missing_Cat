@@ -19,8 +19,23 @@
             </ul>
         </nav>
     </div>
+    <div class="forms">
+        <div class="form-wrapper">
+            <h3>Post cat</h3>
+            <form action="http://localhost:3000/post" method="post" class="light-border"
+                enctype="multipart/form-data" id="postCatForm">
+                <input class="light-border" type="text" name="name" placeholder="Name">
+                <input class="light-border" type="text" name="location" placeholder="location">
+                <input class="light-border" type="date" name="date" placeholder="date">
+                <input class="light-border" type="file" name="cat" accept="image/*" placeholder="Choose file">
+                <button class="light-border" type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+</div>
     <script src="./js/serialize.js"></script>
     <script src="./js/login.js" type="module"></script>
+    <script type="module" src="./js/post.js"></script>
 </body>
 
 </html>
