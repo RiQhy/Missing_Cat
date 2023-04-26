@@ -33,7 +33,11 @@ const postUser = async (req, res) =>{
     const salt = await bcrypt.genSalt(10);
     const password = await bcrypt.hash(req.body.passwd, salt);
     const newUser = {
-        
+        FirstName: req.body.FirstName,
+        LastName: req.body.LastName,
+        email: req.body.email,
+        password: password,
+        role: 1
     };
     const errors = validationResult(req);
     console.log('validation errors', errors);
