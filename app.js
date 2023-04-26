@@ -7,6 +7,12 @@ const passport = require('./utils/passport');
 const app = express();
 const port = 3000;
 
+// Log middleware
+app.use((req, res, next) => {
+    console.log(Date.now() + ': request: ' + req.method + ' ' + req.path);
+    next();
+});
+
 app.use(express.static('ui'));
 app.use('/img', express.static('img'));
 //Add cors headers

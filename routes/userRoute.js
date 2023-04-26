@@ -9,13 +9,15 @@ const {body} = require('express-validator');
 router.route('/')
     .get(userController.getUserList)
     .post(
-        body('name').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
+        body('FirstName').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
+        body('LastName').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
         body('email').isEmail(),
         body('password').isAlphanumeric().isLength({min: 8}),
         userController.postUser
     )
     .put(
-        body('name').isAlphanumeric().isLength({min: 1, max: 30}),
+        body('FirstName').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
+        body('LastName').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
         body('email').isEmail(),
         body('password').isAlphanumeric().isLength({min: 8}),
         userController.putUser

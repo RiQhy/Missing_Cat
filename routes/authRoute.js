@@ -6,7 +6,7 @@ const { login, logout } = require("../controllers/authController");
 const{postUser} = require('../controllers/userController');
 
 router
-.post("/login", login)
+.post('/login', login)
 .get('/logout', logout)
 .post(
     '/register',
