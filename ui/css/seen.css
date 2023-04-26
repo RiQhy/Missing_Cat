@@ -2,6 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: Verdana;
+    background: linear-gradient(90deg, 
+                rgb(233, 199, 27) 0%, 
+                rgb(107, 214, 93) 50%, 
+                rgb(185, 233, 27) 100%);
   }
   
   .container {
