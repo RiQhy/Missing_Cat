@@ -37,7 +37,7 @@ const postUser = async (req, res) =>{
         LastName: req.body.LastName,
         email: req.body.email,
         password: password,
-        role: 1,
+        role: 1
     };
     const errors = validationResult(req);
     console.log('validation errors', errors);
