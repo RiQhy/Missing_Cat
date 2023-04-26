@@ -30,7 +30,7 @@ const getUserById = async (id) => {
 const insertUser = async (user) => {
   try {
     const sql = 'INSERT INTO user VALUES (null, ?, ?, ?, ?, ?)';
-    const values = [user.Firstname, user.Lastname, user.email, user.password, user.role];
+    const values = [user.FirstName, user.LastName, user.email, user.password, user.role];
     const [result] = await promisePool.query(sql, values);
     return result.insertId;
   } catch (e) {
