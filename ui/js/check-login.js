@@ -5,7 +5,7 @@ import {url} from "./conf.js";
 
   // check sessionStorage
   if (!sessionStorage.getItem('token') || !sessionStorage.getItem('user')) {
-    location.href = 'log_req.html';
+    location.href = 'login.html';
     return;
   }
   // check if token valid
