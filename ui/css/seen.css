@@ -9,18 +9,42 @@ body {
   }
   
   .container {
-    max-width: 40em;
+    max-width: 60em;
     margin: auto;
     padding: 1em;
   }
   
   .light-border {
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    border-radius: 12px;
+    border: 2px solid #ccc;
     padding: 1em;
     box-sizing: border-box;
   }
   
+  nav {
+    background: linear-gradient(90deg, 
+                rgb(144, 233, 27) 0%, 
+                rgb(93, 214, 166) 50%, 
+                rgb(27, 233, 79) 100%);
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    overflow:hidden;
+  }
+
+  nav a {
+    float: left;
+    color:rgb(233, 27, 27);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .active {
+    background-color:rgb(236, 204, 42);
+    border-radius: 12px;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -49,6 +73,13 @@ body {
   }
   
   .form-wrapper {
+    margin-top: 10%;
+    margin-right: 30%;
+    background: linear-gradient(90deg, 
+                rgb(238, 77, 19) 0%, 
+                rgb(231, 186, 27) 50%, 
+                rgb(236, 42, 42) 100%);
+    border-radius: 12px;
     width: 33%;
   }
   
