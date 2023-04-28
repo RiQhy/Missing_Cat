@@ -73,6 +73,7 @@ body {
   }
   
   .form-wrapper {
+    text-align: center;
     margin:auto;
     background: linear-gradient(90deg, 
                 rgb(238, 77, 19) 0%, 
