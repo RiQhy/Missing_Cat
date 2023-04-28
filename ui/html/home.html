@@ -15,8 +15,8 @@
                 <li><a href="post.html">Post</a></li>
                 <li><a href="seen.html">Seen</a></li>
                 <li><a id="profile" href="profile.html">Profile</a></li>
-                <li><a href="logout.html">Logout</a></li>
-                <li><a class="deactive" id="login-reg" href="login.html">Login & reqister</a></li>
+                <li><a id="logout" href="logout.html">Logout</a></li>
+                <li><a id="login-reg" href="login.html">Login & reqister</a></li>
             </ul>
         </nav>
         <h1>Missing cats</h1>
@@ -27,6 +27,21 @@
     <script src="../js/check-login.js"></script>
     <script src="../js/serialize.js"></script>
     <script src="../js/home.js"></script>
+    <script>
+        // select login/register and logout links
+    const loginRegLink = document.querySelector('#login-reg');
+    const logoutLink = document.querySelector('#logout');
+    
+    // check sessionStorage
+    if (!sessionStorage.getItem('token') || !sessionStorage.getItem('user')) {
+      // user not logged in, hide logout and show login/register
+      logoutLink.style.display = 'none';
+      loginRegLink.style.display = 'block';
+    } else {
+      // user logged in, hide login/register and show logout
+      loginRegLink.style.display = 'none';
+      logoutLink.style.display = 'block';
+    }
+    </script>
 </body>
-
 </html>
