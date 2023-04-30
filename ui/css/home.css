@@ -105,3 +105,113 @@ body {
     text-align: center;
     text-decoration: none;
   }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana;
+      background: linear-gradient(90deg, 
+                  rgb(233, 199, 27) 0%, 
+                  rgb(107, 214, 93) 50%, 
+                  rgb(185, 233, 27) 100%);
+    }
+    
+    .container {
+      max-width: 40em;
+      margin: auto;
+      padding: 1em;
+    }
+    
+    .light-border {
+      border-radius: 12px;
+      border: 2px solid #ccc;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    
+    nav {
+      background: linear-gradient(90deg, 
+                  rgb(144, 233, 27) 0%, 
+                  rgb(93, 214, 166) 50%, 
+                  rgb(27, 233, 79) 100%);
+      border-radius: 12px;
+      border: 2px solid #ccc;
+      box-sizing: border-box;
+      overflow:hidden;
+    }
+  
+    nav a {
+      float: left;
+      color:rgb(233, 27, 27);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 10px;
+    }
+    .active {
+      background-color:rgb(236, 204, 42);
+      border-radius: 12px;
+    }
+  
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    
+    li {
+      width: 30%;
+      margin: 0.5em;
+    }
+    
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .resp {
+      width: 100%;
+    }
+    
+    .forms {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .form-wrapper {
+      width: 33%;
+    }
+    
+    input,
+    button,
+    select {
+      display: inline-block;
+      width: 100%;
+      margin: 0.5em 0;
+    }
+    
+    select {
+      line-height: 1.5em;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      background-image: url('');
+      background-repeat: no-repeat, repeat;
+      background-position: right 0.7em top 50%, 0 0;
+      background-size: 0.65em auto, 100%;
+    }
+    
+    .button {
+      background-color: #ccc;
+      color: #fff;
+      display: inline-block;
+      width: 100%;
+      margin: 0.5em 0;
+      border: 1px rgb(74, 74, 74) solid;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
