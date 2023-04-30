@@ -1,5 +1,5 @@
 'use strict';
-import {url} from '../../conf.js';
+import {url} from './conf.js';
 
 // select existing html elements
 const addForm = document.querySelector('#postCatForm');
