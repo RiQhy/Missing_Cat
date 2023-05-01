@@ -111,3 +111,6 @@ body {
     height: 30rem;
   }
   
+  @media only screen and (max-width: 600px){
+    
+  }

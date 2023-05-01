@@ -1,5 +1,5 @@
 'use strict';
-import {url} from './conf';
+import {url} from './conf.js';
 
 
 // select existing html elements
