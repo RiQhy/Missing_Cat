@@ -28,9 +28,11 @@
                 <input class="light-border" type="text" name="name" placeholder="Name">
                 <input class="light-border" type="text" name="location" placeholder="location">
                 <input class="light-border" type="date" name="date" placeholder="date">
-                <select class="light-border" name="where" id="where-to-post">
-                    <option value=" ">Select where to post</option>
-                </select>
+                <select class="light-border" name="tables" id="table-to-insert">
+                    <option value="">Select where to post</option>
+                    <option value="post">Missing Cat</option>
+                    <option value="seen">Sighted</option>
+                  </select>
                 <input class="light-border" type="file" name="cat" accept="image/*" placeholder="Choose file">
                
                 <button class="light-border" type="submit">Upload</button>
@@ -42,7 +44,9 @@
     <script src="../js/login.js" type="module"></script>
     <script type="module" src="../js/post.js"></script>
     <script src="../js/loggedInUser.js"></script>
+    
     <script>
+        /*
         var select = document.getElementById("where-to-post");
 
         var missing_cat = document.createElement("option");
@@ -54,7 +58,10 @@
         seen.value = "sighted_cat";
         
         select.add(missing_cat);
-        select.add(seen);</script>
+        
+        select.add(seen);
+        */
+        </script>
 </body>
 
 </html>
