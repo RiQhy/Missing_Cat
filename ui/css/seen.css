@@ -58,6 +58,10 @@ body {
     margin: 0.5em;
   }
   
+  h1{
+    font-size: 25px;
+  }
+
   figure {
     margin: 0;
     padding: 0;
@@ -183,6 +187,10 @@ body {
       margin: 0.5em;
     }
     
+    h1{
+      font-size: 20px;
+    }
+
     figure {
       margin: 0;
       padding: 0;

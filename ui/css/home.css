@@ -63,6 +63,10 @@ body {
     padding: 0;
   }
   
+  h1{
+    font-size: 25px;
+  }
+
   .resp {
     width: 100%;
   }
@@ -165,6 +169,10 @@ body {
     li {
       width: 30%;
       margin: 0.5em;
+    }
+
+    h1{
+      font-size: 20px;
     }
     
     figure {
