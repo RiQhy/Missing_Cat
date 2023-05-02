@@ -19,5 +19,5 @@ addForm.addEventListener('submit', async (evt) => {
   const response = await fetch(url + '/post', fetchOptions);
   const json = await response.json();
   alert(json.message);
-  location.href = 'front.html';
+  location.href = 'home.html';
 });
