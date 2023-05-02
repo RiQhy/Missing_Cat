@@ -9,7 +9,7 @@ const getQParam = (param) => {
 };
 
 // get id from address
-const cat_id = getQParam('id');
+const post_id = getQParam('id');
 
 // select existing html elements
 const img = document.querySelector('#image img');
