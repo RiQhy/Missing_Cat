@@ -36,7 +36,7 @@ const insertPost = async (post) => {
     const sql = `INSERT INTO ${tableName} (post_id, image, date, location, name, user_id) VALUES (?, ?, ?, ?, ?, ?);`;
     const [rows] = await promisePool.query(sql, [
       null, // id is auto_increment
-      post.image,
+      post.post,
       post.date,
       post.location,
       post.name,
