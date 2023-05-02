@@ -7,4 +7,4 @@ project
 
 
 # Setting up database
-1. Install database (not yet initialized)
+1. Install database (not yet imported)
