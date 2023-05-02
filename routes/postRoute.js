@@ -20,6 +20,9 @@ const upload = multer({dest: 'img/', fileFilter});
 router.route('/')
     .get(postController.getPostList)
     .post(upload.single('post') , 
+        body('name').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
+        body('location').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
+        body('date').isDate(),
         postController.postPost
     )
 

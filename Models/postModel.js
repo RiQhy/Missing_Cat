@@ -32,8 +32,8 @@ const getPostById = async (id) => {
 
 const insertPost = async (post) => {
   try {
-    const tableName = post.table === 'post' ? 'missing_cats' : 'sightings';
-    const sql = `INSERT INTO ${tableName} (image, date, location, name, user_id) VALUES (?, ?, ?, ?, ?, ?);`;
+    const tableName = post.table === 'post' ? 'post' : 'seen';
+    const sql = `INSERT INTO ${tableName} (post_id, image, date, location, name, user_id) VALUES (?, ?, ?, ?, ?, ?);`;
     const [rows] = await promisePool.query(sql, [
       null, // id is auto_increment
       post.image,
@@ -71,7 +71,6 @@ const modifyCat = async (cat, userId) => {
 };
 */
 const deletePost = async (id, userId) => {
-  // TODO: delete the file itself
   try {
     const sql = `DELETE FROM post WHERE post_id=? AND user_id=?`;
     const [rows] = await promisePool.query(sql, [id, userId]);
