@@ -3,7 +3,6 @@ import {url} from './conf.js';
 
 // select existing html elements
 const addForm = document.querySelector('#postCatForm');
-const tables = document.querySelector('#where-to-post');
 
 // submit post cat form
 addForm.addEventListener('submit', async (evt) => {

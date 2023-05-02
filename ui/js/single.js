@@ -22,9 +22,9 @@ const getPost = async (id) => {
         }
     };
     const response = await fetch(url + '/post/' + id, fetchOptions);
-    const cat = await response.json();
-    img.src = `${url}/${cat.filename}`;
-    addMarker(JSON.parse(cat.coords));
+    const post = await response.json();
+    img.src = `${url}/${post.filename}`;
+    addMarker(JSON.parse(post.coords));
 };
 
 getPost(post_id);

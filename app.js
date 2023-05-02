@@ -3,6 +3,7 @@ const cors = require('cors');
 const postRoute = require('./routes/postRoute');
 const userRoute = require('./routes/userRoute');
 const authRoute = require('./routes/authRoute');
+const seenRoute = require('./routes/seenRoute');
 const passport = require('./utils/passport');
 const app = express();
 const port = 3000;
@@ -24,6 +25,7 @@ app.use(passport.initialize());
 
 app.use('/auth', authRoute);
 app.use('/post', passport.authenticate('jwt', {session: false}), postRoute);
+app.use('/seen', passport.authenticate('jwt', {session: false}), seenRoute);
 app.use('/user', passport.authenticate('jwt', {session: false}), userRoute);
 
 

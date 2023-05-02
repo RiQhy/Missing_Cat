@@ -1,7 +1,6 @@
 'use strict';
 import {url} from './conf.js';
 
-
 // select existing html elements
 const ul = document.querySelector('#list');
 
@@ -21,7 +20,7 @@ const createCatCards = (cats) => {
 
     // open image in single.html
     img.addEventListener('click', () => {
-      location.href = 'single.html?id=' + cat.post_id;
+      location.href = 'single.html?id=' + post.post_id;
     });
 
     const figure = document.createElement('figure').appendChild(img);
@@ -47,6 +46,34 @@ const createCatCards = (cats) => {
     li.appendChild(p2);
     li.appendChild(p3);
     ul.appendChild(li);
+    if (user.role === 0 || user.user_id === post.user_id) {
+      
+      // delete selected cat
+      const delButton = document.createElement('button');
+      delButton.innerHTML = 'Delete';
+      delButton.classList.add('button');
+      delButton.addEventListener('click', async () => {
+        const fetchOptions = {
+          method: 'DELETE',
+          headers: {
+            Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+          },
+        };
+        try {
+          const response = await fetch(
+            url + '/post/' + post.post_id,
+            fetchOptions
+          );
+          const json = await response.json();
+          console.log('delete response', json);
+          getPost();
+        } catch (e) {
+          console.log(e.message);
+        }
+      });
+
+      li.appendChild(delButton);
+    }
   });
 };
 

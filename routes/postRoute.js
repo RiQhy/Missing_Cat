@@ -23,6 +23,7 @@ router.route('/')
         body('name').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
         body('location').isAlphanumeric().isLength({min: 1, max: 30}).escape().trim(),
         body('date').isDate(),
+        body('user_id').isInt({min:1}),
         postController.postPost
     )
 
