@@ -8,14 +8,14 @@ const ul = document.querySelector('#list');
 const user = JSON.parse(sessionStorage.getItem('user'));
 
 // create cat cards
-const createCatCards = (cats) => {
+const createCatCards = (posts) => {
   // clear ul
   ul.innerHTML = '';
-  cats.forEach((cat) => {
+  posts.forEach((post) => {
     // create li with DOM methods
     const img = document.createElement('img');
-    img.src = url + '/img/' + cat.filename;
-    img.alt = cat.name;
+    img.src = url + '/img/' + post.filename;
+    img.alt = post.name;
     img.classList.add('resp');
 
     // open image in single.html

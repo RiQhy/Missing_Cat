@@ -25,7 +25,7 @@ router.route('/')
         body('date').isDate(),
         body('user_id').isInt({min:1}),
         postController.postPost
-    )
+    );
 
 router.route('/:id')
     .get(postController.getPost)
