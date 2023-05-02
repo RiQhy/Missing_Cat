@@ -10,12 +10,12 @@ const port = 3000;
 
 // Log middleware
 app.use((req, res, next) => {
-    console.log(Date.now() + ': request: ' + req.method + ' ' + req.path);
+    console.log(new Date() + ': ' + req.method + ' ' + req.path);
     next();
 });
 
 app.use(express.static('ui'));
-app.use('/img', express.static('img'));
+app.use(express.static('img'));
 //Add cors headers
 app.use(cors());
 

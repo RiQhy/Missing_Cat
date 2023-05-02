@@ -86,8 +86,8 @@ const getPost = async () => {
       },
     };
     const response = await fetch(url + '/post', fetchOptions);
-    const cats = await response.json();
-    createCatCards(cats);
+    const posts = await response.json();
+    createCatCards(posts);
   } catch (e) {
     console.log(e.message);
   }

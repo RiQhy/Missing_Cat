@@ -49,6 +49,8 @@ const postPost = async (req, res) =>{
     }
     
     const newPost = req.body;
+    newPost.filename = req.file.filename;
+    newPost.user_id = req.user.user_id;
     try{
         const result = await postModel.insertPost(newPost);
         res.status(201).json({message: 'new post added'});

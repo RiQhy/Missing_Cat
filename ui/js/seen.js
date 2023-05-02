@@ -3,7 +3,7 @@ import {url} from './conf.js';
 
 
 // select existing html elements
-const ul = document.querySelector('#list');
+const ul = document.querySelector('#list2');
 
 // get user data for admin check
 const user = JSON.parse(sessionStorage.getItem('user'));
